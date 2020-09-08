@@ -103,6 +103,8 @@ public class MyDbHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         // deleting
         db.delete(Params.TABLE_NAME, Params.KEY_ID + "=?", new String[]{String.valueOf(id)});
+        // closing
+        db.close();
     }
 
     // function to delete task
@@ -111,6 +113,8 @@ public class MyDbHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         // deleting
         db.delete(Params.TABLE_NAME, Params.KEY_ID + "=?", new String[]{String.valueOf(task.getId())});
+        //closing
+        db.close();
     }
 
     // function to get number of entries in the database
