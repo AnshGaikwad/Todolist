@@ -119,6 +119,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             View mView = inflater.inflate(R.layout.cudialog, null);
             final EditText task_name = mView.findViewById(R.id.d_task);
             final EditText task_description = mView.findViewById(R.id.d_description);
+
+            // setting text
+            task_name.setText(task.getName());
+            task_description.setText(task.getDescription());
+
             builder.setView(mView);
             builder.setCancelable(false);
 
